@@ -1,0 +1,8 @@
+[2022-03-28  15:56:15] WARN connection/get_ssl_certificate Invalid private key file /etc/nginx/certs/default.key (system lib)
+[2022-03-28  15:56:15] WARN slave/slave_startup process has 65536 max file descriptor limit
+[2022-03-29  19:39:32] WARN connection/get_ssl_certificate Invalid private key file /etc/nginx/certs/default.key (system lib)
+[2022-03-29  19:39:32] WARN slave/slave_startup process has 65536 max file descriptor limit
+[2022-03-29  19:48:04] WARN connection/get_ssl_certificate Invalid private key file /etc/nginx/certs/ssl.key (system lib)
+[2022-03-29  19:48:04] WARN slave/slave_startup process has 65536 max file descriptor limit
+[2022-03-30  20:39:41] WARN connection/get_ssl_certificate Invalid private key file /etc/nginx/certs/ssl.key (system lib)
+[2022-03-30  20:39:41] WARN slave/slave_startup process has 65536 max file descriptor limit

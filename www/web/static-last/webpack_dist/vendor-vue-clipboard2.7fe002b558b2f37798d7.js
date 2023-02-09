@@ -1,0 +1,21 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunk_name_"] = self["webpackChunk_name_"] || []).push([["vendor-vue-clipboard2"],{
+
+/***/ "./node_modules/vue-clipboard2/vue-clipboard.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vue-clipboard2/vue-clipboard.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Clipboard = __webpack_require__(/*! clipboard/dist/clipboard.min.js */ \"./node_modules/clipboard/dist/clipboard.min.js\") // FIXME: workaround for browserify\n\nvar VueClipboardConfig = {\n  autoSetContainer: false,\n  appendToBody: true // This fixes IE, see #50\n}\n\nvar VueClipboard = {\n  install: function (Vue) {\n    var globalPrototype = Vue.version.slice(0, 2) === '3.' ? Vue.config.globalProperties : Vue.prototype\n    globalPrototype.$clipboardConfig = VueClipboardConfig\n    globalPrototype.$copyText = function (text, container) {\n      return new Promise(function (resolve, reject) {\n        var fakeElement = document.createElement('button')\n        var clipboard = new Clipboard(fakeElement, {\n          text: function () { return text },\n          action: function () { return 'copy' },\n          container: typeof container === 'object' ? container : document.body\n        })\n        clipboard.on('success', function (e) {\n          clipboard.destroy()\n          resolve(e)\n        })\n        clipboard.on('error', function (e) {\n          clipboard.destroy()\n          reject(e)\n        })\n        if (VueClipboardConfig.appendToBody) document.body.appendChild(fakeElement)\n        fakeElement.click()\n        if (VueClipboardConfig.appendToBody) document.body.removeChild(fakeElement)\n      })\n    }\n\n    Vue.directive('clipboard', {\n      bind: function (el, binding, vnode) {\n        if (binding.arg === 'success') {\n          el._vClipboard_success = binding.value\n        } else if (binding.arg === 'error') {\n          el._vClipboard_error = binding.value\n        } else {\n          var clipboard = new Clipboard(el, {\n            text: function () { return binding.value },\n            action: function () { return binding.arg === 'cut' ? 'cut' : 'copy' },\n            container: VueClipboardConfig.autoSetContainer ? el : undefined\n          })\n          clipboard.on('success', function (e) {\n            var callback = el._vClipboard_success\n            callback && callback(e)\n          })\n          clipboard.on('error', function (e) {\n            var callback = el._vClipboard_error\n            callback && callback(e)\n          })\n          el._vClipboard = clipboard\n        }\n      },\n      update: function (el, binding) {\n        if (binding.arg === 'success') {\n          el._vClipboard_success = binding.value\n        } else if (binding.arg === 'error') {\n          el._vClipboard_error = binding.value\n        } else {\n          el._vClipboard.text = function () { return binding.value }\n          el._vClipboard.action = function () { return binding.arg === 'cut' ? 'cut' : 'copy' }\n        }\n      },\n      unbind: function (el, binding) {\n        // FIXME: investigate why $element._vClipboard was missing\n        if (!el._vClipboard) return\n        if (binding.arg === 'success') {\n          delete el._vClipboard_success\n        } else if (binding.arg === 'error') {\n          delete el._vClipboard_error\n        } else {\n          el._vClipboard.destroy()\n          delete el._vClipboard\n        }\n      }\n    })\n  },\n  config: VueClipboardConfig\n}\n\nif (true) {\n  module.exports = VueClipboard\n} else {}\n\n\n//# sourceURL=webpack://%5Bname%5D/./node_modules/vue-clipboard2/vue-clipboard.js?");
+
+/***/ })
+
+}]);

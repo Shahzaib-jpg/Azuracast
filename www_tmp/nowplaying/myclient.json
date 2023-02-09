@@ -1,0 +1,164 @@
+{
+    "station": {
+        "id": 1,
+        "name": "Myclient",
+        "shortcode": "myclient",
+        "description": "",
+        "frontend": "icecast",
+        "backend": "liquidsoap",
+        "listen_url": "https://radio.ourtrial.com/radio/8000/radio.mp3",
+        "url": "",
+        "public_player_url": "https://radio.ourtrial.com/public/myclient",
+        "playlist_pls_url": "https://radio.ourtrial.com/public/myclient/playlist.pls",
+        "playlist_m3u_url": "https://radio.ourtrial.com/public/myclient/playlist.m3u",
+        "is_public": true,
+        "mounts": [
+            {
+                "id": 1,
+                "name": "/radio.mp3 (128kbps MP3)",
+                "url": "https://radio.ourtrial.com/radio/8000/radio.mp3",
+                "bitrate": 128,
+                "format": "mp3",
+                "listeners": {
+                    "total": 0,
+                    "unique": 0,
+                    "current": 0
+                },
+                "path": "/radio.mp3",
+                "is_default": true
+            }
+        ],
+        "remotes": []
+    },
+    "listeners": {
+        "total": 0,
+        "unique": 0,
+        "current": 0
+    },
+    "live": {
+        "is_live": false,
+        "streamer_name": "",
+        "broadcast_start": null
+    },
+    "now_playing": {
+        "sh_id": 1441,
+        "played_at": 1668302365,
+        "duration": 0,
+        "playlist": "",
+        "streamer": "",
+        "is_request": false,
+        "song": {
+            "id": "ab574fe34f592faf5c3f27dbc52088a4",
+            "text": "AzuraCast.com - AzuraCast is Live!",
+            "artist": "AzuraCast.com",
+            "title": "AzuraCast is Live!",
+            "album": "",
+            "genre": "",
+            "lyrics": "",
+            "art": "https://radio.ourtrial.com/static/img/generic_song.jpg",
+            "custom_fields": []
+        },
+        "elapsed": 7495249,
+        "remaining": 0
+    },
+    "playing_next": null,
+    "song_history": [
+        {
+            "sh_id": 1440,
+            "played_at": 1668302352,
+            "duration": 13,
+            "playlist": "",
+            "streamer": "",
+            "is_request": false,
+            "song": {
+                "id": "666a9e1b6edc47fb70b6187d138ebdb6",
+                "text": "Gary Wyatt - 24 Hours A Day",
+                "artist": "Gary Wyatt",
+                "title": "24 Hours A Day",
+                "album": "",
+                "genre": "",
+                "lyrics": "",
+                "art": "https://radio.ourtrial.com/static/img/generic_song.jpg",
+                "custom_fields": []
+            }
+        },
+        {
+            "sh_id": 1439,
+            "played_at": 1668302340,
+            "duration": 12,
+            "playlist": "",
+            "streamer": "pratikamit",
+            "is_request": false,
+            "song": {
+                "id": "ade4783ba6c3c3da617a77672428c87b",
+                "text": " - 08 I Love You Lord",
+                "artist": "",
+                "title": "08 I Love You Lord",
+                "album": "",
+                "genre": "",
+                "lyrics": "",
+                "art": "https://radio.ourtrial.com/static/img/generic_song.jpg",
+                "custom_fields": []
+            }
+        },
+        {
+            "sh_id": 1438,
+            "played_at": 1668302326,
+            "duration": 14,
+            "playlist": "",
+            "streamer": "pratikamit",
+            "is_request": false,
+            "song": {
+                "id": "30fac3b519196b89045172b724833be8",
+                "text": "Pastor Gary L Wyatt - My Suffiency",
+                "artist": "Pastor Gary L Wyatt",
+                "title": "My Suffiency",
+                "album": "",
+                "genre": "",
+                "lyrics": "",
+                "art": "https://radio.ourtrial.com/static/img/generic_song.jpg",
+                "custom_fields": []
+            }
+        },
+        {
+            "sh_id": 1437,
+            "played_at": 1668302251,
+            "duration": 75,
+            "playlist": "",
+            "streamer": "pratikamit",
+            "is_request": false,
+            "song": {
+                "id": "b87dd6cb75b6181b16aed3c61dd1d591",
+                "text": " - 07 You're My One and Only",
+                "artist": "",
+                "title": "07 You're My One and Only",
+                "album": "",
+                "genre": "",
+                "lyrics": "",
+                "art": "https://radio.ourtrial.com/static/img/generic_song.jpg",
+                "custom_fields": []
+            }
+        },
+        {
+            "sh_id": 1436,
+            "played_at": 1668302223,
+            "duration": 28,
+            "playlist": "",
+            "streamer": "pratikamit",
+            "is_request": false,
+            "song": {
+                "id": "ade4783ba6c3c3da617a77672428c87b",
+                "text": " - 08 I Love You Lord",
+                "artist": "",
+                "title": "08 I Love You Lord",
+                "album": "",
+                "genre": "",
+                "lyrics": "",
+                "art": "https://radio.ourtrial.com/static/img/generic_song.jpg",
+                "custom_fields": []
+            }
+        }
+    ],
+    "is_online": true,
+    "cache": "event"
+}

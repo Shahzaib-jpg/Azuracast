@@ -1,0 +1,17 @@
+{
+  "dist/app.js": "dist/app-8bf5d186e1.js",
+  "dist/lib/bootstrap-notify/bootstrap-notify.min.js": "dist/lib/bootstrap-notify/bootstrap-notify-a02f92a499.min.js",
+  "dist/lib/bootstrap/bootstrap.bundle.min.js": "dist/lib/bootstrap/bootstrap-90146f01d8.bundle.min.js",
+  "dist/lib/clipboard/clipboard.min.js": "dist/lib/clipboard/clipboard-27784b7376.min.js",
+  "dist/lib/humanize-duration/humanize-duration.js": "dist/lib/humanize-duration/humanize-duration-ead05c0863.js",
+  "dist/lib/jquery/jquery.min.js": "dist/lib/jquery/jquery-8fb8fee4fc.min.js",
+  "dist/lib/luxon/luxon.min.js": "dist/lib/luxon/luxon-74acc4930d.min.js",
+  "dist/lib/roboto-fontface/css/roboto/roboto-fontface.css": "dist/lib/roboto-fontface/css/roboto/roboto-fontface-691f1edc86.css",
+  "dist/lib/sweetalert2/sweetalert2.min.js": "dist/lib/sweetalert2/sweetalert2-c45032242b.min.js",
+  "dist/lib/webcaster/libsamplerate.js": "dist/lib/webcaster/libsamplerate-a85d5dcb75.js",
+  "dist/lib/webcaster/libshine.js": "dist/lib/webcaster/libshine-35ee0aaa2e.js",
+  "dist/lib/webcaster/taglib.js": "dist/lib/webcaster/taglib-9009697b4d.js",
+  "dist/lib/webcaster/webcast.js": "dist/lib/webcaster/webcast-75f3ecd006.js",
+  "dist/material.js": "dist/material-f9fd891597.js",
+  "dist/style.css": "dist/style-3763a00890.css"
+}

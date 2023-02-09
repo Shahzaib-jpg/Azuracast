@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunk_name_"] = self["webpackChunk_name_"] || []).push([["vendor-chartjs-adapter-luxon"],{
+
+/***/ "./node_modules/chartjs-adapter-luxon/dist/chartjs-adapter-luxon.esm.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/chartjs-adapter-luxon/dist/chartjs-adapter-luxon.esm.js ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js */ \"./node_modules/chart.js/dist/chart.esm.js\");\n/* harmony import */ var luxon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! luxon */ \"./node_modules/luxon/build/cjs-browser/luxon.js\");\n/*!\n * chartjs-adapter-luxon v1.1.0\n * https://www.chartjs.org\n * (c) 2021 chartjs-adapter-luxon Contributors\n * Released under the MIT license\n */\n\n\n\nconst FORMATS = {\n  datetime: luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime.DATETIME_MED_WITH_SECONDS,\n  millisecond: 'h:mm:ss.SSS a',\n  second: luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime.TIME_WITH_SECONDS,\n  minute: luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime.TIME_SIMPLE,\n  hour: {hour: 'numeric'},\n  day: {day: 'numeric', month: 'short'},\n  week: 'DD',\n  month: {month: 'short', year: 'numeric'},\n  quarter: \"'Q'q - yyyy\",\n  year: {year: 'numeric'}\n};\n\nchart_js__WEBPACK_IMPORTED_MODULE_0__._adapters._date.override({\n  _id: 'luxon', // DEBUG\n\n  /**\n   * @private\n   */\n  _create: function(time) {\n    return luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime.fromMillis(time, this.options);\n  },\n\n  formats: function() {\n    return FORMATS;\n  },\n\n  parse: function(value, format) {\n    const options = this.options;\n\n    if (value === null || typeof value === 'undefined') {\n      return null;\n    }\n\n    const type = typeof value;\n    if (type === 'number') {\n      value = this._create(value);\n    } else if (type === 'string') {\n      if (typeof format === 'string') {\n        value = luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime.fromFormat(value, format, options);\n      } else {\n        value = luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime.fromISO(value, options);\n      }\n    } else if (value instanceof Date) {\n      value = luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime.fromJSDate(value, options);\n    } else if (type === 'object' && !(value instanceof luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime)) {\n      value = luxon__WEBPACK_IMPORTED_MODULE_1__.DateTime.fromObject(value);\n    }\n\n    return value.isValid ? value.valueOf() : null;\n  },\n\n  format: function(time, format) {\n    const datetime = this._create(time);\n    return typeof format === 'string'\n      ? datetime.toFormat(format, this.options)\n      : datetime.toLocaleString(format);\n  },\n\n  add: function(time, amount, unit) {\n    const args = {};\n    args[unit] = amount;\n    return this._create(time).plus(args).valueOf();\n  },\n\n  diff: function(max, min, unit) {\n    return this._create(max).diff(this._create(min)).as(unit).valueOf();\n  },\n\n  startOf: function(time, unit, weekday) {\n    if (unit === 'isoWeek') {\n      weekday = Math.trunc(Math.min(Math.max(0, weekday), 6));\n      const dateTime = this._create(time);\n      return dateTime.minus({days: (dateTime.weekday - weekday + 7) % 7}).startOf('day').valueOf();\n    }\n    return unit ? this._create(time).startOf(unit).valueOf() : time;\n  },\n\n  endOf: function(time, unit) {\n    return this._create(time).endOf(unit).valueOf();\n  }\n});\n\n\n//# sourceURL=webpack://%5Bname%5D/./node_modules/chartjs-adapter-luxon/dist/chartjs-adapter-luxon.esm.js?");
+
+/***/ })
+
+}]);

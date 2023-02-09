@@ -1,0 +1,14 @@
+---
+- name: Enable and restart all core services
+  service:
+    name: "{{ item }}"
+    enabled: true
+    state: restarted
+  ignore_errors: true
+  with_items:
+    - "mysql"
+    - "php8.1-fpm"
+    - "nginx"
+    - "redis-server"
+    - "redis"
+    - "beanstalkd"
